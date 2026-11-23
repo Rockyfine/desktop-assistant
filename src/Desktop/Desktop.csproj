@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>DesktopAssistant</AssemblyName>
+    <RootNamespace>DesktopAssistant.Desktop</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <ApplicationIcon Condition="'$(BrandIcon)' == ''">../../installer/assistant.ico</ApplicationIcon>
+    <ApplicationIcon Condition="'$(BrandIcon)' != ''">$(BrandIcon)</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/Core.csproj" />
+    <Content Include="../../branding.json" Link="branding.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="$(ApplicationIcon)" Link="assistant.ico" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+{
+  "protocol": 1,
+  "id": "soft-gain",
+  "name": "柔和音量",
+  "executable": "SoftGain.exe",
+  "slots": ["fx"]
+}
